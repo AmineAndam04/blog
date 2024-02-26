@@ -1,0 +1,48 @@
+baseURL = 'https://amineandam04.github.io/'
+languageCode = 'en-us'
+title = 'RL blog'
+theme = "hugo-blog-awesome"
+
+[params]
+  goToTop = true
+
+# set markup.highlight.noClasses=false to enable code highlight
+[markup]
+  [markup.highlight]
+    noClasses = false
+  [markup.goldmark.renderer]
+    unsafe = true
+	[markup.tableOfContents]
+		startLevel = 2 # ToC starts from H2
+		endLevel = 4 # ToC ends at H4
+		ordered = false # generates <ul> instead of <ol>
+
+
+[[params.socialIcons]]
+name = "github"
+url = "https://github.com/AmineAndam04"
+
+[[params.socialIcons]]
+name = "twitter"
+url = "https://twitter.com/AmineAndam"
+
+[[params.socialIcons]]
+name = "Linkedin"
+url = "https://www.linkedin.com/in/amineandam/"
+
+[[menu.main]]
+name = "Home"
+url = "/"
+weight = 1
+
+[[menu.main]]
+name = "Post"
+url = "/blog/"
+weight = 2
+
+[params.author]
+  avatar = "avatar.jpg" # put the file in assets folder; also ensure that image has same height and width
+  # Note: image is not rendered if the resource(avatar image) is not found. No error is displayed.
+  intro = "Reinforcement Learning Blogg"
+  name = "Amine ANDAM"
+  description = "Implement reinforcement learning algorithms from scratch using Pytorch"

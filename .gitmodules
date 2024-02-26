@@ -1,0 +1,8 @@
+[submodule "rlblog/deploy"]
+	path = rlblog/deploy
+	url = https://github.com/AmineAndam04/amineandam04.github.io.git
+	branch = main
+[submodule "rlblog/public"]
+	path = rlblog/public
+	url = https://github.com/AmineAndam04/amineandam04.github.io.git
+	branch = main
