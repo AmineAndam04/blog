@@ -45,4 +45,4 @@ weight = 2
   # Note: image is not rendered if the resource(avatar image) is not found. No error is displayed.
   intro = "Reinforcement Learning Blogg"
   name = "Amine ANDAM"
-  description = "Implement reinforcement learning algorithms from scratch using Pytorch"
+  description = "Implement  Multi-agent reinforcement learning algorithms from scratch using JAX/Flax"
