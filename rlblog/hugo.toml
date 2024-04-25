@@ -43,6 +43,6 @@ weight = 2
 [params.author]
   avatar = "avatar.jpg" # put the file in assets folder; also ensure that image has same height and width
   # Note: image is not rendered if the resource(avatar image) is not found. No error is displayed.
-  intro = "Reinforcement Learning Blogg"
+  intro = "MARL Blog"
   name = "Amine ANDAM"
-  description = "Implement  Multi-agent reinforcement learning algorithms from scratch using JAX/Flax"
+  description = "Multi-agent reinforcement learning algorithms from scratch using JAX/Flax"
