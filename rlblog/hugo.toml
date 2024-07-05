@@ -5,6 +5,8 @@ theme = "hugo-blog-awesome"
 
 [params]
   goToTop = true
+  math = true
+  katex = true
 
 # set markup.highlight.noClasses=false to enable code highlight
 [markup]
@@ -16,6 +18,14 @@ theme = "hugo-blog-awesome"
 		startLevel = 2 # ToC starts from H2
 		endLevel = 4 # ToC ends at H4
 		ordered = false # generates <ul> instead of <ol>
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['\[', '\]'], ['$$', '$$']]
+          inline = [['\(', '\)']]
+
 
 
 [[params.socialIcons]]
