@@ -331,22 +331,15 @@ class Hyperparameters:
     update_target: int = 200
     optimizer: str = "Adam"
     learning_rate: float = 0.01
-
-
 hyperparameters = Hyperparameters()
-
-
 class VDN():
     def __init__(self,hyperparameters,
                       network):
-
         ## Hyperparameters
         ...
         self.update_target = hyperparameters.update_target
         self.optimizer = hyperparameters.optimizer
         self.learning_rate = hyperparameters.learning_rate
-        
-
     def train(self):
         for time_step in range(self.total_time_steps):
             ## Sample and compute loss  
@@ -356,4 +349,16 @@ class VDN():
             self.update_networks(loss)
     def update_networks(self,loss):
         pass
+```
+
+Now we are going to implement each function. Before that we need to talk a bit about the environment.
+We will use [Pursuit](https://pettingzoo.farama.org/environments/sisl/pursuit/) environment.For simplicity, we will not use the default environment. We are going to use a less number of agents and targets. Below is a simple code to interact with the environment: 
+
+```python
+from pettingzoo.sisl import pursuit_v4
+env = pursuit_v4.parallel_env(render_mode="human",shared_reward=False,x_size=10, y_size=10,obs_range=4,n_evaders=18,n_pursuers=5,tag_reward=0.01,catch_reward=5.0)
+observations, infos = env.reset()
+for iteration in range(20):
+    actions = {agent: env.action_space(agent).sample() for agent in env.agents}
+    next_observations, rewards, terminations, truncations, infos = env.step(actions)
 ```
